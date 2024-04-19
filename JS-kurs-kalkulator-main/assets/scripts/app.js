@@ -1,10 +1,4 @@
-alert("Zdravo");
-
-let pocetnaVrijednost = 0;
-
-pocetnaVrijednost = pocetnaVrijednost + 5;
-
-outputResult(pocetnaVrijednost, "0+5");
+/* alert("Zdravo");
 
 
 function zbirBrojeva(a, b) {
@@ -48,4 +42,38 @@ function kolicnikBrojeva(a, b) {
   return kolicnik;
 }
 
- kolicnikBrojeva(1, 3);
+ kolicnikBrojeva(1, 3); */
+
+ //racunanje
+
+
+ let currentResult = 0; 
+
+addBtn.addEventListener("click", add);
+subtractBtn.addEventListener("click", substract);
+multiplyBtn.addEventListener("click", multiply);
+divideBtn.addEventListener("click", divide);
+
+function add(){
+    let calculationDescription = currentResult + " + " + userInput.value; 
+    currentResult = currentResult + parseInt(userInput.value);
+    outputResult(currentResult, calculationDescription);
+}
+
+function substract(){
+    let calculationDescription = currentResult + " - " + userInput.value; 
+    currentResult = currentResult - parseInt(userInput.value);
+    outputResult(currentResult, calculationDescription);
+}
+
+function multiply(){
+    let calculationDescription = currentResult + " * " + userInput.value; 
+    currentResult = currentResult * parseInt(userInput.value);
+    outputResult(currentResult, calculationDescription);
+}
+
+function divide(){
+    let calculationDescription = currentResult + " / " + userInput.value; 
+    currentResult = currentResult / parseInt(userInput.value);
+    outputResult(currentResult, calculationDescription);
+}
